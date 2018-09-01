@@ -1,5 +1,0 @@
-aaa
-这是需要合并的内容
-这是master分支上的内容,这是mergedemo分支上添加的内容
-version1
-version2
