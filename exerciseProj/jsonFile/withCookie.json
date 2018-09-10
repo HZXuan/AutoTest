@@ -1,7 +1,54 @@
-{
-  "name": "$name$",
-  "version": "$version$",
-  "dependencies": {
-    $END$
+[
+  {
+    "description":"这是一个会返回cookie的get请求",
+    "request":{
+      "uri":"/returnCookie",
+      "method":"get"
+    },
+    "response":{
+      "cookies":{
+        "login":"true",
+        "safe":"true"
+      },
+      "json":{
+        "name":"huhansan",
+        "age":"18"
+      }
+    }
+  },
+  {
+    "description": "这是一个要带cookie和json才能访问的get请求",
+    "request": {
+      "uri": "/getWithCookie",
+      "method": "get",
+      "cookies": {
+        "login": "true",
+        "safe": "true"
+      }
+    },
+    "response": {
+      "status":"100",
+      "text": "aaa"
+    }
+  },
+  {
+    "description":"这是一个要带cookie和json才能访问的post请求",
+    "request":{
+      "uri":"/postWithCookie",
+      "method":"post",
+      "cookies":{
+        "login":"true",
+        "safe":"true"
+      },
+      "json":{
+        "fuck":"you"
+      }
+    },
+    "response":{
+      "status":"100",
+      "json":{
+        "succeed":"YesISucceeded!!!"
+      }
+    }
   }
-}
+]
